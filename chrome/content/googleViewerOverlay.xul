@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<overlay id="googleViewerOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<!-- This imports our javascript. //-->
+	<script type="application/x-javascript" src="chrome://googleviewer/content/googleViewerOverlay.js"/>
+	<script type="application/x-javascript">
+	<![CDATA[
+    window.addEventListener("load", function() {
+        var appcontent = window.document.getElementById("appcontent");
+        if (appcontent) {
+            appcontent.addEventListener("DOMContentLoaded", com.bsiegel.googleviewer.gv_doViewer, false);
+        }
+    }, false); 
+	]]></script>
+
+</overlay>
