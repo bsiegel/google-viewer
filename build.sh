@@ -9,4 +9,4 @@ BUILDDIR=$PROJDIR/builds/$COMMITDATE
 mkdir -p $BUILDDIR
 rm -f $BUILDDIR/$XPIFILE
 cd $PROJDIR/src
-zip -q -r $BUILDDIR/$XPIFILE .
+zip -q -r $BUILDDIR/$XPIFILE . -x *.bak
