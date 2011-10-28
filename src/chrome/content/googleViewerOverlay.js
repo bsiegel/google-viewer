@@ -43,6 +43,8 @@ com.bsiegel.googleviewer = {
         for (i=0; i<links.length; i++) {
             var scheme = links[i].href.substr(0, links[i].href.indexOf(':'));
             if ((scheme=="http"||scheme=="https")&&(links[i].href.indexOf('.doc')!=-1||links[i].href.indexOf('.xls')!=-1||links[i].href.indexOf('.ppt')!=-1||links[i].href.indexOf('.pdf')!=-1||links[i].href.indexOf('.pages')!=-1||links[i].href.indexOf('.ai')!=-1||links[i].href.indexOf('.tif')!=-1||links[i].href.indexOf('.dxf')!=-1||links[i].href.indexOf('.svg')!=-1||links[i].href.indexOf('.eps')!=-1||links[i].href.indexOf('.ps')!=-1||links[i].href.indexOf('.ttf')!=-1||links[i].href.indexOf('.xps')!=-1)) {
+                links[i].setAttribute("onmousedown",null);
+                links[i].setAttribute("onmouseup",null);
                 links[i].setAttribute("onclick","if(!confirm('Open this file with Google Docs?'))return true;window.location='"+scheme+"://docs.google.com/gview?url='+this.href;return false;");
             }
         }
